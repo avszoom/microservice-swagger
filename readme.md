@@ -13,3 +13,12 @@ But we can also get swagger UI too .
 1. Add dependency for swagger springfox ui in pom.xml
 2. enable swagger by using annotation @EnableSwagger in main applicaiton
 3. /swagger-ui.html return swagger documentation in open api spec format awesome
+
+Build Project - 
+
+1) Go to root and run mvn clean install
+2) this will generate jar in target folder based on package name
+
+Run -
+
+1) go to target and run java -jar package-name.jar this will switch on spring boot.

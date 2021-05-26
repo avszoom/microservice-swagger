@@ -1,6 +1,7 @@
 package com.avszoom.microserviceswagger.resources;
 
 import com.avszoom.microserviceswagger.models.Contact;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,12 +13,12 @@ import java.util.List;
 @RequestMapping("/contact")
 public class ContactResource {
 
-    @RequestMapping("/{name}")
+    @GetMapping("/{name}")
     public Contact getContact(@PathVariable("name") String name){
         return new Contact(name,"23834957");
     }
 
-    @RequestMapping("/all")
+    @GetMapping("/all")
     public List<Contact> getAllContacts(){
         return Arrays.asList(new Contact("avinash","89348534"),
                 new Contact("priti","23948293"));
